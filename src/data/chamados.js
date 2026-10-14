@@ -7,3 +7,4 @@ export const initialTickets = [
   { id: "acesso-laboratorio", title: "Acesso bloqueado", sector: "Laboratório", resolved: false },
   { id: "computador-secretaria", title: "Computador lento", sector: "Secretaria", resolved: false },
 ];
+ 

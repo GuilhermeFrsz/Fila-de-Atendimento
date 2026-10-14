@@ -14,7 +14,7 @@ export default function ChamadoForm({ onAddChamado }) {
       [name]: value,
     }));
   }
-
+    
   function handleSubmit(event) {
     // Evita que o formulário recarregue a página inteira
     event.preventDefault();

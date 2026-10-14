@@ -7,4 +7,4 @@ export default function Panel({ title, children }) {
       <div className="panel-content">{children}</div>
     </section>
   );
-}
+} 

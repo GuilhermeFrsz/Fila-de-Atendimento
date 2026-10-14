@@ -5,7 +5,7 @@ export default function ChamadoCard({ id, title, sector, resolved, onToggle, onD
         <h2>{title}</h2>
         <p>Setor: {sector}</p>
       </div>
-      {/* RENDEREIZAÇÃO CONDICIONAL SIMPLES */}
+      {/* RENDEREIZAÇÃO CONDICIONAL SIMPLES */} 
       <span className={`badge ${resolved ? "badge-resolved" : "badge-open"}`}>
         {resolved ? "Resolvido" : "Aberto"}</span>
 

@@ -14,7 +14,7 @@ function loadChamados() {
   
   // Se não tem nada salvo, retorna os dados da aula
   if (!savedChamados) return initialTickets;
-  
+   
   try {
     const parsedChamados = JSON.parse(savedChamados);
     // Verifica se o que foi lido realmente é um array
