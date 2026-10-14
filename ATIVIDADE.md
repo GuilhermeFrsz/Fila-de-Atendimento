@@ -18,26 +18,26 @@ funções da aplicação devem ser construídas por você. O CSS já está prepa
 ## Etapas obrigatórias
 
 ### E1 — Preparar o projeto (Aula 01 · 1,0 ponto)
-- [ ] `npm install` e `npm run dev` funcionam.
-- [ ] Identifique no projeto a função de `App.jsx`, `main.jsx` e `package.json`.
-- [ ] Substitua a identificação do aluno em `README.md` e envie o primeiro commit.
+- [X] `npm install` e `npm run dev` funcionam.
+- [X] Identifique no projeto a função de `App.jsx`, `main.jsx` e `package.json`.
+- [X] Substitua a identificação do aluno em `README.md` e envie o primeiro commit.
 
 **Teste:** a tela inicial abre sem erro e o commit aparece no seu GitHub.
 
 ### E2 — Montar a lista (Aula 02 · 1,5 ponto)
-- [ ] Crie os componentes `ChamadoCard` e `ChamadoList`, cada um em seu arquivo.
-- [ ] Use os dados de `src/data/chamados.js` para exibir os **quatro** chamados.
-- [ ] Gere os cartões com `map()` e uma `key` estável baseada no `id`.
-- [ ] Mostre **Aberto** ou **Resolvido** conforme o dado, com aparência diferente.
-- [ ] Quando a lista estiver vazia, mostre `Nenhum chamado cadastrado.`.
+- [X] Crie os componentes `ChamadoCard` e `ChamadoList`, cada um em seu arquivo.
+- [X] Use os dados de `src/data/chamados.js` para exibir os **quatro** chamados.
+- [X] Gere os cartões com `map()` e uma `key` estável baseada no `id`.
+- [X] Mostre **Aberto** ou **Resolvido** conforme o dado, com aparência diferente.
+- [X] Quando a lista estiver vazia, mostre `Nenhum chamado cadastrado.`.
 
 **Teste:** quatro cartões vindos do array; nenhum aviso de `key` no console.
 
 ### E3 — Ligar os componentes (Aula 03 · 1,5 ponto)
-- [ ] Os cartões recebem dados por props, sem alterá-los.
-- [ ] Crie um componente `Panel` que receba `title` e `children`.
-- [ ] Use o `Panel` para a lista e para a área de resumo da página.
-- [ ] Coloque um botão em cada cartão. Ao clicar, a ação deve chegar ao `App`
+- [X] Os cartões recebem dados por props, sem alterá-los.
+- [X] Crie um componente `Panel` que receba `title` e `children`.
+- [X] Use o `Panel` para a lista e para a área de resumo da página.
+- [X] Coloque um botão em cada cartão. Ao clicar, a ação deve chegar ao `App`
       por uma função passada por props, recebendo o `id` correto.
 
 **Teste:** cada botão identifica apenas o chamado clicado; nenhum evento dispara sozinho ao abrir a página.
