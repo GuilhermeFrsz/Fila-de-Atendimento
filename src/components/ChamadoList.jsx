@@ -1,12 +1,24 @@
+import { useContext } from "react";
+import { ChamadosContext } from "../context/ChamadosContext"; // Importe o contexto
 import ChamadoCard from "./ChamadoCard";
 
-export default function ChamadoList({ chamados, onToggle, onDelete }) {
+// Remova as props da assinatura da função: () em vez de ({ chamados, ... })
+export default function ChamadoList() {
+  const contexto = useContext(ChamadosContext);
+
+  if (!contexto) {
+    throw new Error("ChamadoList precisa estar dentro do ChamadosProvider.");
+  }
+
+  // Puxa as variáveis e funções direto da nossa "tomada" global
+  const { chamados, handleToggle, handleDelete } = contexto;
+
   if (chamados.length === 0) {
     return <p>Nenhum chamado cadastrado.</p>;
   }
 
   return (
-    <section className="ticket-card" aria-label="Chamados de hoje">
+    <div className="ticket-list" aria-label="Chamados de hoje">
       {chamados.map((chamado) => (
         <ChamadoCard
           key={chamado.id}
@@ -14,14 +26,11 @@ export default function ChamadoList({ chamados, onToggle, onDelete }) {
           title={chamado.title}
           sector={chamado.sector}
           resolved={chamado.resolved}
-          onToggle={onToggle}
-          onDelete={onDelete} 
-  
-        // {...chamado} é usado para resumir tudo que fiz acima.
+          // O ChamadoCard CONTINUA recebendo props normalmente
+          onToggle={handleToggle} 
+          onDelete={handleDelete}
         />
       ))}
-    </section>
+    </div>
   );
 }
-
-

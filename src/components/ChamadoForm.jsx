@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ChamadosContext } from "../context/ChamadosContext";
 
-export default function ChamadoForm({ onAddTicket }) {
+export default function ChamadoForm() {
+  const contexto = useContext(ChamadosContext);
+
+  if (!contexto) {
+    throw new Error("ChamadoForm precisa estar dentro do ChamadosProvider.");
+  }
+
+  const { handleAddChamado } = contexto;
+
+  // ... o resto do seu código (useState do form, handleChange) continua igual!
+  
   const [form, setForm] = useState({ title: "", sector: "" });
   const [error, setError] = useState("");
 
@@ -17,11 +28,18 @@ export default function ChamadoForm({ onAddTicket }) {
       setError("Preencha o assunto e o setor.");
       return;
     }
-    onAddTicket({ id: crypto.randomUUID(), title, sector, resolved: false });
+    // Se passou pela validação, enviamos o objeto montado para a função do contexto
+    handleAddChamado({
+      id: crypto.randomUUID(),
+      title: title,
+      sector: sector,
+      resolved: false,
+    });
     setForm({ title: "", sector: "" });
     setError("");
   }
 
+  
   return (
     <form className="ticket-form" onSubmit={handleSubmit}>
       <div className="field">
