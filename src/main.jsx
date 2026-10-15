@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css"; 
+import { BrowserRouter } from "react-router"; // <-- Importa o GPS
+import "./index.css";
 import App from "./App";
-import { ChamadosProvider } from "./context/ChamadosContext"; // 1. Importe o Provider que você criou!
+import { ChamadosProvider } from "./context/ChamadosContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* 2. Envolva o App com o Provider */}
-    <ChamadosProvider>
-      <App />
-    </ChamadosProvider>
+    <BrowserRouter>  {/* <-- O GPS abraça toda a aplicação */}
+      <ChamadosProvider>
+        <App />
+      </ChamadosProvider>
+    </BrowserRouter>
   </StrictMode>
 );

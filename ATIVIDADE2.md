@@ -16,16 +16,16 @@ consultando a apostila e seu próprio projeto faz parte da avaliação.
 
 ## E7 — Contexto e responsabilidade do estado (Aula 07 · 4,0 pontos)
 
-- [ ] Existe `src/context/ChamadosContext.jsx`, que exporta `ChamadosContext` e `ChamadosProvider`.
-- [ ] O Provider passa a cuidar dos chamados, da leitura inicial dos dados, da persistência e das ações de cadastrar, resolver/reabrir e excluir.
-- [ ] O total de resolvidos é calculado a partir dos chamados; não é um estado adicional.
-- [ ] O Provider envolve todos os componentes que precisam dos dados.
-- [ ] `ChamadoList` e `ChamadoForm` passam a obter os dados e as ações diretamente do contexto. Não recebem mais `tickets`, `onToggle`, `onDelete` ou `onAddTicket` por props.
-- [ ] `ChamadoCard` continua recebendo seus dados e ações por props.
-- [ ] `App` não guarda a lista de chamados em `useState` e não contém os handlers de cadastro, exclusão ou alternância.
-- [ ] Um componente que usa o contexto fora do Provider produz erro com mensagem compreensível.
-- [ ] Os painéis existentes continuam organizados assim: **Resumo** (contador), **Novo chamado** (formulário) e **Chamados** (lista).
-- [ ] Tudo o que funcionava antes continua funcionando: quatro chamados iniciais, resolver/reabrir, excluir, cadastrar, preservar alterações após F5, recuperar dados inválidos e atualizar o título da aba.
+- [X] Existe `src/context/ChamadosContext.jsx`, que exporta `ChamadosContext` e `ChamadosProvider`.
+- [X] O Provider passa a cuidar dos chamados, da leitura inicial dos dados, da persistência e das ações de cadastrar, resolver/reabrir e excluir.
+- [X] O total de resolvidos é calculado a partir dos chamados; não é um estado adicional.
+- [X] O Provider envolve todos os componentes que precisam dos dados.
+- [X] `ChamadoList` e `ChamadoForm` passam a obter os dados e as ações diretamente do contexto. Não recebem mais `tickets`, `onToggle`, `onDelete` ou `onAddTicket` por props.
+- [X] `ChamadoCard` continua recebendo seus dados e ações por props.
+- [X] `App` não guarda a lista de chamados em `useState` e não contém os handlers de cadastro, exclusão ou alternância.
+- [X] Um componente que usa o contexto fora do Provider produz erro com mensagem compreensível.
+- [X] Os painéis existentes continuam organizados assim: **Resumo** (contador), **Novo chamado** (formulário) e **Chamados** (lista).
+- [X] Tudo o que funcionava antes continua funcionando: quatro chamados iniciais, resolver/reabrir, excluir, cadastrar, preservar alterações após F5, recuperar dados inválidos e atualizar o título da aba.
 
 **Teste de aceite:** repita todas as operações da Parte 1. Confira o Provider no ponto de entrada da aplicação e confirme que o `App` deixou de controlar os chamados.
 
