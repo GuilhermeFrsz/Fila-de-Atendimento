@@ -86,7 +86,7 @@ aplicação volta aos dados iniciais sem travar.
 - [X] Não há tela branca nem erros de JavaScript no console.
 - [X] A interface funciona com os quatro dados iniciais e com novos chamados.
 - [X] Há **um commit por etapa** (mínimo de seis), enviado ao repositório próprio.
-- [ ] `node_modules`, `dist` e `.env` não foram enviados.
+- [x] `node_modules`, `dist` e `.env` não foram enviados.
 - [ ] O aluno consegue explicar o caminho **evento → callback → estado →
       renderização → persistência**.
 

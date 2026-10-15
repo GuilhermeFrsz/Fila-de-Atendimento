@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"; 
 import { initialTickets } from "./data/chamados";
 import "./App.css";
-import ChamadoList from "./ChamadoList";
-import ChamadoForm from "./ChamadoForm";
-import Panel from "./Panel";
+import ChamadoList from "./components/ChamadoList";
+import ChamadoForm from "./components/ChamadoForm";
+import Panel from "./components/Panel";
 
 // Chave que a atividade exige para o localStorage
 const STORAGE_KEY = "iteam:fila-atendimento";
@@ -74,8 +74,11 @@ export default function App() {
         <p className="eyebrow">ITEAM · SUPORTE</p>
         <h1>Fila de Atendimento</h1>
         <p>Organize os chamados recebidos pelos setores.</p>
-        <p>{resolvidosCount} de {chamados.length} chamados resolvidos.</p>
       </header>
+
+      <Panel title="Resumo">
+        <p>{resolvidosCount} de {chamados.length} chamados resolvidos.</p>
+      </Panel>
 
       <Panel title="Novo Chamado">
         <ChamadoForm onAddChamado={handleAddChamado} />
